@@ -1,0 +1,9 @@
+== README
+
+WesAdmits2.0!
+
+To get it up and running:
+bundle install
+rake db:migrate
+rake db:seed
+rails server

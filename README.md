@@ -1,2 +1,10 @@
-# WesEvents
-Calendar app that displays all events happening within Wesleyan in a user friendly interface
+WesEvents!
+
+A Calendar App that displays all upcoming events within wesleyan with a user friendly interface!
+
+
+To get it up and running:
+bundle install
+rake db:migrate
+rake db:seed
+rails server

@@ -1,0 +1,53 @@
+<%= form_for @event do |f| %>
+
+	<% if @event.errors.any? %>
+    	<div id="error_explanation">
+      	<h2>
+        	<%= pluralize(@event.errors.count, "error") %> prohibited
+        	this event from being published:
+      	</h2>
+      	<ul>
+        	<% @event.errors.full_messages.each do |msg| %>
+          		<li><%= msg %></li>
+        	<% end %>
+      	</ul>
+    	</div>
+  	<% end %>
+  <p>
+    <%= f.label :'Event Name' %><br>
+    <%= f.text_field :eventName %>
+  </p>
+
+  <p>
+    <%= f.label :Location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+	<%= f.label :'Event Start' %>
+	<%= f.time_select :startTime, :default => {:hour => '12', :minut => '00'}, :ampm => true, :minute_step => 15 %>
+	&emsp;
+	<%= f.date_select :startDay, :order => [:month, :day, :year] %>
+  </p>
+
+  <p>
+	<%= f.label :'Event End' %>
+	<%= f.time_select :endTime, :default => {:hour => '12', :minut => '00'}, :ampm => true, :minute_step => 15 %>
+	&emsp;
+	<%= f.date_select :endDay, :order => [:month, :day, :year] %>
+  </p>
+
+  <p>
+    <%= f.label :Description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :'Facebook Link' %><br>
+    <%= f.url_field :facebookLink %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
