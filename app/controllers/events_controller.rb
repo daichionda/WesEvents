@@ -5,6 +5,17 @@ class EventsController < ApplicationController
 
 	def index
 		@events = Event.all
+        if params[:show_all]
+            return @events
+        else
+            @result = []
+            @events.each do |event|
+                if event.startDay.strftime('%m/%d') == params[:date]
+                    @result.push(event)
+                end
+            end
+            @events = @result
+        end
 	end
 
 	def edit

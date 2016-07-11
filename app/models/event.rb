@@ -2,6 +2,10 @@ class Event < ActiveRecord::Base
     validate :event_cannot_be_in_the_past
     validate :start_before_end
 
+    def start_time
+        self.startDay
+    end
+
     def event_cannot_be_in_the_past
         hour = Time.now.strftime('%k').to_i
         min = Time.now.strftime('%M').to_i

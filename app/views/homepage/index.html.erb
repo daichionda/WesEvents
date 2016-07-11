@@ -1,5 +1,13 @@
 <h1>Wes Events</h1>
-<%= month_calendar do |date| %>
-  <%= date %>
+<%= month_calendar events: @events do |date, events| %>
+    <% if date.strftime('%m') == Time.now.strftime('%m')%>
+        <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d')) %>
+
+        <% events.each do |event| %>
+            <div>
+                <%= event.eventName %>
+            </div>
+        <% end %>
+    <% end %>
 <% end %>
-<%= link_to 'All Events', controller: 'events' %>
+<%= link_to 'All Events', controller: 'events', :show_all => true %>

@@ -1,33 +1,36 @@
 <h1>Listing Events</h1>
+<p><%= link_to 'New Event', new_event_path %></p>
 
-<%= link_to 'New Event', new_event_path %>
-
-<table >
-  <tr>
-    <th width = '150'>Event</th>
-    <th width = '150'>Location</th>
-    <th width = '150'>Event Start</th>
-    <th width = '150'>Event End</th>
-    <th width = '150'>Description</th>
-    <th width = '150'>Facebook Event Link</th>
-    <th colspan='3' />
-  </tr>
-
-  <% @events.each do |event| %>
-    <tr>
-        <td><%= event.eventName %></td>
-        <td><%= event.location %></td>
-        <td><%= event.startTime.strftime('%I:%M %p') %><br><%= event.startDay.strftime('%m/%d/%y') %></td>
-        <td><%= event.endTime.strftime('%I:%M %p') %><br><%= event.endDay.strftime('%m/%d/%y') %></td>
-        <td><%= event.description %></td>
-        <% if event.facebookLink == "" %>
-            <td><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
-        <% elsif %>
-            <td></td>
-        <% end %>
-      <td><%= link_to 'Show', event_path(event) %></td>
-      <td><%= link_to 'Edit', edit_event_path(event)%></td>
-      <td> <%= link_to 'Delete', event_path(event), method: :delete, data: {confirm: 'Are you sure?' } %> </td>
-    </tr>
-  <% end %>
-</table>
+<% if @events != [] %>
+    <table >
+      <tr>
+        <th width = '150'>Event</th>
+        <th width = '150'>Location</th>
+        <th width = '150'>Event Start</th>
+        <th width = '150'>Event End</th>
+        <th width = '150'>Description</th>
+        <th width = '150'>Facebook Event Link</th>
+        <th colspan='3' />
+      </tr>
+      <% @events.each do |event| %>
+        <tr>
+            <td><%= event.eventName %></td>
+            <td><%= event.location %></td>
+            <td><%= event.startTime.strftime('%I:%M %p') %><br><%= event.startDay.strftime('%m/%d/%y') %></td>
+            <td><%= event.endTime.strftime('%I:%M %p') %><br><%= event.endDay.strftime('%m/%d/%y') %></td>
+            <td><%= event.description %></td>
+            <% if event.facebookLink == "" %>
+                <td><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
+            <% elsif %>
+                <td></td>
+            <% end %>
+          <td><%= link_to 'Show', event_path(event) %></td>
+          <td><%= link_to 'Edit', edit_event_path(event)%></td>
+          <td> <%= link_to 'Delete', event_path(event), method: :delete, data: {confirm: 'Are you sure?' } %> </td>
+        </tr>
+      <% end %>
+    </table>
+<% else %>
+    <p> No Events on this Day! </p>
+<% end %>
+<p><%= link_to "Go Back", controller: 'homepage' %></p>
