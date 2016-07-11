@@ -15,12 +15,12 @@
   	<% end %>
   <p>
     <%= f.label :'Event Name' %><br>
-    <%= f.text_field :eventName %>
+    <%= f.text_field :eventName :required => true %>
   </p>
 
   <p>
     <%= f.label :Location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location :required => true %>
   </p>
 
   <p>
@@ -39,12 +39,12 @@
 
   <p>
     <%= f.label :Description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description :required => true %>
   </p>
 
   <p>
     <%= f.label :'Facebook Link' %><br>
-    <%= f.url_field :facebookLink %>
+    <%= f.text_field :facebookLink %>
   </p>
 
   <p>

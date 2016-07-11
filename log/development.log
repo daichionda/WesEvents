@@ -3450,3 +3450,838 @@ Processing by EventsController#index as HTML
   [1m[35mEvent Load (2.1ms)[0m  SELECT `events`.* FROM `events`
   Rendered events/index.html.erb within layouts/application (23.6ms)
 Completed 200 OK in 357ms (Views: 346.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-10 15:04:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (252.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 921ms (Views: 880.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 15:04:33 -0700
+
+
+Started GET "/events" for ::1 at 2016-07-10 15:04:36 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.9ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (137.7ms)
+Completed 200 OK in 211ms (Views: 110.4ms | ActiveRecord: 66.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-10 15:05:25 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 135ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 15:05:27 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/2/edit" for ::1 at 2016-07-10 15:05:29 -0700
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (155.2ms)[0m  SELECT  `events`.* FROM `events` WHERE `events`.`id` = 2 LIMIT 1
+  Rendered events/_form.html.erb (296.5ms)
+  Rendered events/edit.html.erb within layouts/application (377.4ms)
+Completed 200 OK in 679ms (Views: 461.1ms | ActiveRecord: 155.2ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 15:05:36 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (944.8ms)[0m  [1mDROP DATABASE IF EXISTS `WesAdmits2_0_development`[0m
+  [1m[35m (59.8ms)[0m  DROP DATABASE IF EXISTS `WesAdmits2_0_test`
+  [1m[36m (14.3ms)[0m  [1mCREATE DATABASE `WesAdmits2_0_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `WesAdmits2_0_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (359.0ms)[0m  [1mCREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (402.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (407.8ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (116.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160613065632')[0m
+  [1m[35m (222.0ms)[0m  CREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB
+  [1m[36m (210.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (177.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20160613065632')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (62.5ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party1', 'Dorm1', '2025-07-01 12:00:00.000000', '2016-07-25', '2025-07-01 15:00:00.000000', '2016-07-25', 'Desc1', 'http://facebook.com')[0m
+  [1m[35m (13.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party2', 'Dorm2', '2026-07-01 12:00:00.000000', '2016-07-26', '2026-07-01 15:00:00.000000', '2016-07-26', 'Desc2', 'http://facebook.com')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party3', 'Dorm3', '2027-07-01 12:00:00.000000', '2016-07-27', '2027-07-01 15:00:00.000000', '2016-07-27', 'Desc3', 'http://facebook.com')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party4', 'Dorm4', '2028-07-01 12:00:00.000000', '2016-07-28', '2028-07-01 15:00:00.000000', '2016-07-28', 'Desc4', 'http://facebook.com')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party5', 'Dorm5', '2029-07-01 12:00:00.000000', '2016-07-29', '2029-07-01 15:00:00.000000', '2016-07-29', 'Desc5', 'http://facebook.com')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party6', 'Dorm6', '2030-07-01 12:00:00.000000', '2016-07-30', '2030-07-01 15:00:00.000000', '2016-07-30', 'Desc6', 'http://facebook.com')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36m (131.2ms)[0m  [1mDROP DATABASE IF EXISTS `WesAdmits2_0_development`[0m
+  [1m[35m (26.6ms)[0m  DROP DATABASE IF EXISTS `WesAdmits2_0_test`
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE `WesAdmits2_0_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `WesAdmits2_0_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (285.9ms)[0m  [1mCREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (357.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (296.1ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (1.8ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160613065632')[0m
+  [1m[35m (246.9ms)[0m  CREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB
+  [1m[36m (241.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (181.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (32.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20160613065632')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party1', 'Dorm1', '2025-07-01 12:00:00.000000', '2016-07-25', '2025-07-01 15:00:00.000000', '2016-07-25', 'Desc1', 'http://facebook.com')[0m
+  [1m[35m (16.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party2', 'Dorm2', '2026-07-01 12:00:00.000000', '2016-07-26', '2026-07-01 15:00:00.000000', '2016-07-26', 'Desc2', 'http://google.com')
+  [1m[36m (12.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party3', 'Dorm3', '2027-07-01 12:00:00.000000', '2016-07-27', '2027-07-01 15:00:00.000000', '2016-07-27', 'Desc3', 'http://yahoo.com')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (54.9ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party4', 'Dorm4', '2028-07-01 12:00:00.000000', '2016-07-28', '2028-07-01 15:00:00.000000', '2016-07-28', 'Desc4', 'http://youtube.com')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party5', 'Dorm5', '2029-07-01 12:00:00.000000', '2016-07-29', '2029-07-01 15:00:00.000000', '2016-07-29', 'Desc5', 'http://linkedin.com')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party6', 'Dorm6', '2030-07-01 12:00:00.000000', '2016-07-30', '2030-07-01 15:00:00.000000', '2016-07-30', 'Desc6', 'http://roboterra.com')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (141.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'WesAdmits2_0_development'
+  AND fk.table_name = 'events'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `events`
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party1', 'Dorm1', '2025-07-01 12:00:00.000000', '2016-07-25', '2025-07-01 15:00:00.000000', '2016-07-25', 'Desc1', 'http://facebook.com')[0m
+  [1m[35m (31.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party2', 'Dorm2', '2026-07-01 12:00:00.000000', '2016-07-26', '2026-07-01 15:00:00.000000', '2016-07-26', 'Desc2', 'http://google.com')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party3', 'Dorm3', '2027-07-01 12:00:00.000000', '2016-07-27', '2027-07-01 15:00:00.000000', '2016-07-27', 'Desc3', 'http://yahoo.com')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (24.6ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party4', 'Dorm4', '2028-07-01 12:00:00.000000', '2016-07-28', '2028-07-01 15:00:00.000000', '2016-07-28', 'Desc4', 'http://youtube.com')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party5', 'Dorm5', '2029-07-01 12:00:00.000000', '2016-07-29', '2029-07-01 15:00:00.000000', '2016-07-29', 'Desc5', 'http://linkedin.com')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party6', 'Dorm6', '2030-07-01 12:00:00.000000', '2016-07-30', '2030-07-01 15:00:00.000000', '2016-07-30', 'Desc6', 'http://roboterra.com')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[36m (108.1ms)[0m  [1mDROP DATABASE IF EXISTS `WesAdmits2_0_development`[0m
+  [1m[35m (21.8ms)[0m  DROP DATABASE IF EXISTS `WesAdmits2_0_test`
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE `WesAdmits2_0_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.7ms)[0m  CREATE DATABASE `WesAdmits2_0_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (839.6ms)[0m  [1mCREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (131.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (279.4ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160613065632')[0m
+  [1m[35m (190.5ms)[0m  CREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB
+  [1m[36m (143.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (137.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20160613065632')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party1', 'House1', '2025-07-01 12:00:00.000000', '2016-07-25', '2025-07-01 15:00:00.000000', '2016-07-25', 'Desc1', 'http://facebook.com')[0m
+  [1m[35m (15.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party2', 'House2', '2026-07-01 12:00:00.000000', '2016-07-26', '2026-07-01 15:00:00.000000', '2016-07-26', 'Desc2', 'http://google.com')
+  [1m[36m (15.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party3', 'House3', '2027-07-01 12:00:00.000000', '2016-07-27', '2027-07-01 15:00:00.000000', '2016-07-27', 'Desc3', 'http://yahoo.com')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party4', 'House4', '2028-07-01 12:00:00.000000', '2016-07-28', '2028-07-01 15:00:00.000000', '2016-07-28', 'Desc4', 'http://youtube.com')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party5', 'House5', '2029-07-01 12:00:00.000000', '2016-07-29', '2029-07-01 15:00:00.000000', '2016-07-29', 'Desc5', 'http://linkedin.com')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party6', 'House6', '2030-07-01 12:00:00.000000', '2016-07-30', '2030-07-01 15:00:00.000000', '2016-07-30', 'Desc6', 'http://roboterra.com')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/events" for ::1 at 2016-07-10 15:35:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (61.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (17.1ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 832ms (Views: 770.4ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 15:35:59 -0700
+
+
+Started GET "/events/1" for ::1 at 2016-07-10 15:37:59 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (2.2ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  Rendered events/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 184ms (Views: 98.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/events/1/edit" for ::1 at 2016-07-10 15:38:21 -0700
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  Rendered events/_form.html.erb (170.8ms)
+  Rendered events/edit.html.erb within layouts/application (206.1ms)
+Completed 200 OK in 288ms (Views: 285.0ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/events/1" for ::1 at 2016-07-10 15:38:23 -0700
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fbv1/KmEza9vKTqfmAkSnXQPNJC0Yfu86HdS13zdeH68HHv6etInKag3YVXpspPlTQ6yTiT8RcGUJPZoN+2YLQ==", "event"=>{"eventName"=>"Party1", "location"=>"House1", "startTime(1i)"=>"2000", "startTime(2i)"=>"1", "startTime(3i)"=>"1", "startTime(4i)"=>"12", "startTime(5i)"=>"00", "startDay(2i)"=>"7", "startDay(3i)"=>"25", "startDay(1i)"=>"2016", "endTime(1i)"=>"2000", "endTime(2i)"=>"1", "endTime(3i)"=>"1", "endTime(4i)"=>"15", "endTime(5i)"=>"00", "endDay(2i)"=>"7", "endDay(3i)"=>"25", "endDay(1i)"=>"2016", "description"=>"Desc1", "facebookLink"=>"http://facebook.com"}, "commit"=>"Update Event", "id"=>"1"}
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 60ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/events/1" for ::1 at 2016-07-10 15:38:23 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  Rendered events/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/1" for ::1 at 2016-07-10 16:07:04 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (5.3ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  Rendered events/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 268ms (Views: 249.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:07:04 -0700
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:07:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 16:07:04 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 16:07:04 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 16:07:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 16:07:04 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:07:04 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:07:05 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 16:07:05 -0700
+
+
+Started GET "/events/1" for ::1 at 2016-07-10 16:09:02 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  Rendered events/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 185ms (Views: 182.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 16:09:02 -0700
+
+
+Started GET "/events/1" for ::1 at 2016-07-10 16:09:15 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  Rendered events/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 16:09:15 -0700
+
+
+Started GET "/events/1" for ::1 at 2016-07-10 16:09:35 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  Rendered events/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 16:09:36 -0700
+
+
+Started GET "/events/1" for ::1 at 2016-07-10 16:17:24 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  Rendered events/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 222ms (Views: 219.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:17:24 -0700
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:17:24 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 16:17:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 16:17:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 16:17:24 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 16:17:24 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:17:25 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:17:25 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 16:17:25 -0700
+
+
+Started GET "/events" for ::1 at 2016-07-10 16:25:06 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (1.8ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 227ms (Views: 218.0ms | ActiveRecord: 1.8ms)
+  [1m[36m (201.4ms)[0m  [1mDROP DATABASE IF EXISTS `WesAdmits2_0_development`[0m
+  [1m[35m (18.0ms)[0m  DROP DATABASE IF EXISTS `WesAdmits2_0_test`
+  [1m[36m (0.6ms)[0m  [1mCREATE DATABASE `WesAdmits2_0_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `WesAdmits2_0_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (244.8ms)[0m  [1mCREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (217.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (188.3ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160613065632')[0m
+  [1m[35m (255.3ms)[0m  CREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `eventName` varchar(255), `location` varchar(255), `startTime` time NOT NULL, `startDay` date NOT NULL, `endTime` time NOT NULL, `endDay` date NOT NULL, `description` text, `facebookLink` varchar(255)) ENGINE=InnoDB
+  [1m[36m (227.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (203.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20160613065632')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party1', 'House1', '2025-07-01 12:00:00.000000', '2016-07-25', '2025-07-01 15:00:00.000000', '2016-07-25', 'Desc1', 'http://facebook.com')[0m
+  [1m[35m (15.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party2', 'House2', '2026-07-01 12:00:00.000000', '2016-07-26', '2026-07-01 15:00:00.000000', '2016-07-26', 'Desc2', 'http://google.com')
+  [1m[36m (15.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party3', 'House3', '2027-07-01 12:00:00.000000', '2016-07-27', '2027-07-01 15:00:00.000000', '2016-07-27', 'Desc3', 'http://yahoo.com')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party4', 'House4', '2028-07-01 12:00:00.000000', '2016-07-28', '2028-07-01 15:00:00.000000', '2016-07-28', 'Desc4', '')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party5', 'House5', '2029-07-01 12:00:00.000000', '2016-07-29', '2029-07-01 15:00:00.000000', '2016-07-29', 'Desc5', 'http://linkedin.com')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `events` (`eventName`, `location`, `startTime`, `startDay`, `endTime`, `endDay`, `description`, `facebookLink`) VALUES ('Party6', 'House6', '2030-07-01 12:00:00.000000', '2016-07-30', '2030-07-01 15:00:00.000000', '2016-07-30', 'Desc6', '')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/events" for ::1 at 2016-07-10 16:45:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...( if event.facebookLink == '' );@output_buffer.safe_append='
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+  app/views/events/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+  app/views/events/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/events/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (129.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (231.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (374.6ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 16:51:19 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...( if event.facebookLink == '' );@output_buffer.safe_append='
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:35: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+  app/views/events/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+  app/views/events/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/events/index.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (82.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (417.4ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (305.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (606.4ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 16:52:34 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (31.2ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...( if event.facebookLink == "" );@output_buffer.safe_append='
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:35: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+  app/views/events/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+  app/views/events/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/events/index.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (34.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (345.0ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (333.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (679.3ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 16:54:00 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:23: syntax error, unexpected '<'
+...ze;@output_buffer.append=( if <%=event.facebookLink=> == "" ...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:23: syntax error, unexpected ==
+...( if <%=event.facebookLink=> == "" );@output_buffer.safe_app...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:35: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/events/index.html.erb:23: syntax error, unexpected '<'
+  app/views/events/index.html.erb:23: syntax error, unexpected ==
+  app/views/events/index.html.erb:25: syntax error, unexpected keyword_end
+  app/views/events/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+  app/views/events/index.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/events/index.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (38.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (337.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.4ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (242.3ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (532.4ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 16:58:29 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (225.8ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (457.6ms)
+Completed 200 OK in 2569ms (Views: 2288.1ms | ActiveRecord: 279.0ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 16:58:32 -0700
+
+
+Started GET "/events" for ::1 at 2016-07-10 17:00:22 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (127.2ms)
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...( if event.facebookLink == "" );@output_buffer.safe_append='
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:25: syntax error, unexpected keyword_elsif
+...e;@output_buffer.append=( elsif );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:27: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/events/index.html.erb:25: syntax error, unexpected keyword_elsif
+  app/views/events/index.html.erb:27: syntax error, unexpected keyword_end
+  app/views/events/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+  app/views/events/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/events/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (116.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.0ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1010.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (220.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (580.7ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 17:01:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...( if event.facebookLink == "" );@output_buffer.safe_append='
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:25: syntax error, unexpected keyword_elsif
+...e;@output_buffer.append=( elsif );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:27: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/onda/Desktop/WesEvents/app/views/events/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/events/index.html.erb:23: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/events/index.html.erb:25: syntax error, unexpected keyword_elsif
+  app/views/events/index.html.erb:27: syntax error, unexpected keyword_end
+  app/views/events/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+  app/views/events/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/events/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (44.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (536.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (277.8ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (597.2ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 17:06:35 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (49.1ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (333.1ms)
+Completed 200 OK in 6424ms (Views: 6318.5ms | ActiveRecord: 102.8ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 17:06:43 -0700
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-10 17:06:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-10 17:06:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-10 17:06:43 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-10 17:06:43 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-10 17:06:43 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 17:06:44 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-10 17:06:44 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-10 17:06:44 -0700
+
+
+Started GET "/events/3" for ::1 at 2016-07-10 17:06:48 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (96.8ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1[0m
+  Rendered events/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 508ms (Views: 230.7ms | ActiveRecord: 96.8ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 17:07:04 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.7ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for ::1 at 2016-07-10 17:08:20 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 163ms (Views: 160.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-10 17:17:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (7.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (121.4ms)
+  Rendered homepage/index.html.erb within layouts/application (202.8ms)
+Completed 200 OK in 3919ms (Views: 3845.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homepage/index?start_date=2016-08-01" for ::1 at 2016-07-10 17:18:07 -0700
+Processing by HomepageController#index as HTML
+  Parameters: {"start_date"=>"2016-08-01"}
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (26.4ms)
+  Rendered homepage/index.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 200ms (Views: 197.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homepage/index?start_date=2016-07-31" for ::1 at 2016-07-10 17:18:08 -0700
+Processing by HomepageController#index as HTML
+  Parameters: {"start_date"=>"2016-07-31"}
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (41.9ms)
+  Rendered homepage/index.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 129ms (Views: 127.2ms | ActiveRecord: 0.0ms)

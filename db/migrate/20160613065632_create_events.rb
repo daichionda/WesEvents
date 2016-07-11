@@ -9,8 +9,6 @@ class CreateEvents < ActiveRecord::Migration
       t.date_select :endDay
       t.text :description
       t.string :facebookLink
-
-      t.timestamps null: false
     end
   end
 end

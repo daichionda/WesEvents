@@ -24,11 +24,12 @@
   <strong>Descirption:</strong>
   <%= @event.description %>
 </p>
-
-<p>
-  <strong>Facebook Event Link:</strong>
-  <%= @event.facebookLink %>
-</p>
+<% if @event.facebookLink == "" %>
+    <p>
+        <strong>Facebook Event Link:</strong>
+        <a href = '<%= @event.facebookLink %>' target = '_blank'>Event Facebook Page<a/>
+    </p>
+<% end %>
 
 <%= link_to 'Edit', edit_event_path(@event) %>
 <%= link_to 'Back', events_path %>

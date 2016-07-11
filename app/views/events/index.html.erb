@@ -15,16 +15,19 @@
 
   <% @events.each do |event| %>
     <tr>
-      <td><%= event.eventName %></td>
-      <td><%= event.location %></td>
-      <td><%= event.startTime.strftime('%I:%M %p') %><br><%= event.startDay.strftime('%m/%d/%y') %></td>
-      <td><%= event.endTime.strftime('%I:%M %p') %><br><%= event.endDay.strftime('%m/%d/%y') %></td>
-      <td><%= event.description %></td>
-      <td><%= event.facebookLink %></td>
+        <td><%= event.eventName %></td>
+        <td><%= event.location %></td>
+        <td><%= event.startTime.strftime('%I:%M %p') %><br><%= event.startDay.strftime('%m/%d/%y') %></td>
+        <td><%= event.endTime.strftime('%I:%M %p') %><br><%= event.endDay.strftime('%m/%d/%y') %></td>
+        <td><%= event.description %></td>
+        <% if event.facebookLink == "" %>
+            <td><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
+        <% elsif %>
+            <td></td>
+        <% end %>
       <td><%= link_to 'Show', event_path(event) %></td>
       <td><%= link_to 'Edit', edit_event_path(event)%></td>
       <td> <%= link_to 'Delete', event_path(event), method: :delete, data: {confirm: 'Are you sure?' } %> </td>
-
     </tr>
   <% end %>
 </table>

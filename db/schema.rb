@@ -14,16 +14,14 @@
 ActiveRecord::Schema.define(version: 20160613065632) do
 
   create_table "events", force: :cascade do |t|
-    t.string   "eventName",    limit: 255
-    t.string   "location",     limit: 255
-    t.time "startTime",                  null: false
-    t.date "startDay",                   null: false
-    t.time "endTime",                    null: false
-    t.date "endDay",                     null: false
-    t.text     "description",  limit: 65535
-    t.string   "facebookLink", limit: 255
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string "eventName",    limit: 255
+    t.string "location",     limit: 255
+    t.time   "startTime",                  null: false
+    t.date   "startDay",                   null: false
+    t.time   "endTime",                    null: false
+    t.date   "endDay",                     null: false
+    t.text   "description",  limit: 65535
+    t.string "facebookLink", limit: 255
   end
 
 end
