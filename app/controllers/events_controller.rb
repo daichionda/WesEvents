@@ -10,7 +10,7 @@ class EventsController < ApplicationController
         else
             @result = []
             @events.each do |event|
-                if event.startDay.strftime('%m/%d') == params[:date]
+                if event.startDay.strftime('%m/%d/%y') == params[:date]
                     @result.push(event)
                 end
             end

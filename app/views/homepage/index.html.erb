@@ -1,13 +1,28 @@
 <h1>Wes Events</h1>
 <%= month_calendar events: @events do |date, events| %>
-    <% if date.strftime('%m') == Time.now.strftime('%m')%>
-        <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d')) %>
 
-        <% events.each do |event| %>
-            <div>
-                <%= event.eventName %>
-            </div>
+    <% unless params[:start_date].nil? %>
+        <% if date.strftime('%m') == params[:start_date][5,2] %>
+            <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d/%y')) %>
+
+            <% events.each do |event| %>
+                <div>
+                    <%= event.eventName %>
+                </div>
+            <% end %>
+        <% end %>
+    <% else %>
+        <% if date.strftime('%m') == Time.now.strftime('%m') %>
+            <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d/%y')) %>
+
+            <% events.each do |event| %>
+                <div>
+                    <%= event.eventName %>
+                </div>
+            <% end %>
         <% end %>
     <% end %>
 <% end %>
-<%= link_to 'All Events', controller: 'events', :show_all => true %>
+<p> <%= link_to 'Return to Current Month', controller: 'homepage' %> </p>
+<p> <%= link_to 'All Events', controller: 'events', :show_all => true %> </p>
+<p> <%= link_to 'Create New Event', new_event_path %></p>

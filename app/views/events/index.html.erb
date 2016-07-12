@@ -2,6 +2,7 @@
 <p><%= link_to 'New Event', new_event_path %></p>
 
 <% if @events != [] %>
+    <p> Events on <%= params[:date] %> </p>
     <table >
       <tr>
         <th width = '150'>Event</th>
@@ -16,8 +17,8 @@
         <tr>
             <td><%= event.eventName %></td>
             <td><%= event.location %></td>
-            <td><%= event.startTime.strftime('%I:%M %p') %><br><%= event.startDay.strftime('%m/%d/%y') %></td>
-            <td><%= event.endTime.strftime('%I:%M %p') %><br><%= event.endDay.strftime('%m/%d/%y') %></td>
+            <td><%= event.startTime.strftime('%I:%M %p') %><!--<br><%= event.startDay.strftime('%m/%d/%y') %> --></td>
+            <td><%= event.endTime.strftime('%I:%M %p') %><!--<br><%= event.endDay.strftime('%m/%d/%y') %> --></td>
             <td><%= event.description %></td>
             <% if event.facebookLink == "" %>
                 <td><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
