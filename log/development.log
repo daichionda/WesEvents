@@ -8618,3 +8618,428 @@ Processing by HomepageController#index as HTML
   Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (20.5ms)
   Rendered homepage/index.html.erb within layouts/application (28.5ms)
 Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-17 14:29:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (735.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (114.7ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (117.4ms)
+  Rendered homepage/index.html.erb within layouts/application (354.2ms)
+Completed 200 OK in 1170ms (Views: 945.1ms | ActiveRecord: 170.7ms)
+
+
+Started GET "/" for ::1 at 2016-07-17 14:29:28 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (18.5ms)
+  Rendered homepage/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-17 14:29:28 -0700
+
+
+Started GET "/homepage/index?start_date=2016-08-01" for ::1 at 2016-07-17 14:31:39 -0700
+Processing by HomepageController#index as HTML
+  Parameters: {"start_date"=>"2016-08-01"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (26.0ms)
+  Rendered homepage/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 125ms (Views: 91.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index?start_date=2016-09-05" for ::1 at 2016-07-17 14:31:40 -0700
+Processing by HomepageController#index as HTML
+  Parameters: {"start_date"=>"2016-09-05"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (24.5ms)
+  Rendered homepage/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index?start_date=2016-10-03" for ::1 at 2016-07-17 14:31:41 -0700
+Processing by HomepageController#index as HTML
+  Parameters: {"start_date"=>"2016-10-03"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (27.3ms)
+  Rendered homepage/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:31:42 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (20.0ms)
+  Rendered homepage/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?date=07%2F30%2F16" for ::1 at 2016-07-17 14:33:06 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"date"=>"07/30/16"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 416ms (Views: 413.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:33:08 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (22.3ms)
+  Rendered homepage/index.html.erb within layouts/application (59.3ms)
+Completed 200 OK in 96ms (Views: 94.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events?show_all=true" for ::1 at 2016-07-17 14:33:09 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"show_all"=>"true"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/new" for ::1 at 2016-07-17 14:34:43 -0700
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (172.0ms)
+  Rendered events/new.html.erb within layouts/application (198.3ms)
+Completed 200 OK in 276ms (Views: 274.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2016-07-17 14:36:35 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g2fVnmM5TfS2zTe+6tNA8iKvN/foJkh7aHFmNn7FsWb5XypqYs60M5gG2VovcLadkMw1yOgaLQ7tG+JamkwY/A==", "event"=>{"eventName"=>"sdfs", "location"=>"sdf", "startTime(1i)"=>"2016", "startTime(2i)"=>"7", "startTime(3i)"=>"17", "startTime(4i)"=>"14", "startTime(5i)"=>"00", "startDay(2i)"=>"7", "startDay(3i)"=>"13", "startDay(1i)"=>"2016", "endTime(1i)"=>"2016", "endTime(2i)"=>"7", "endTime(3i)"=>"17", "endTime(4i)"=>"14", "endTime(5i)"=>"00", "endDay(2i)"=>"7", "endDay(3i)"=>"17", "endDay(1i)"=>"2016", "description"=>"sdf", "facebookLink"=>"sdf"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::MultiparameterAssignmentErrors (2 error(s) on assignment of multiparameter attributes [error on assignment [2016, 7, 17, 14, 0] to startTime (undefined method `Eastern Time (US & Canada)' for Time:Class),error on assignment [2016, 7, 17, 14, 0] to endTime (undefined method `Eastern Time (US & Canada)' for Time:Class)]):
+  app/controllers/events_controller.rb:30:in `create'
+
+
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (208.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (893.6ms)
+
+
+Started GET "/events" for ::1 at 2016-07-17 14:36:54 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.7ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 86ms (Views: 79.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events/new" for ::1 at 2016-07-17 14:36:56 -0700
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (15.0ms)
+  Rendered events/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2016-07-17 14:36:58 -0700
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:36:59 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (23.4ms)
+  Rendered homepage/index.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 105ms (Views: 103.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events?date=07%2F30%2F16" for ::1 at 2016-07-17 14:37:02 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"date"=>"07/30/16"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for ::1 at 2016-07-17 14:37:03 -0700
+Processing by EventsController#new as HTML
+  Rendered events/_form.html.erb (9.0ms)
+  Rendered events/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2016-07-17 14:37:04 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:37:08 -0700
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (0.8ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (21.3ms)
+  Rendered homepage/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events?date=07%2F27%2F16" for ::1 at 2016-07-17 14:37:10 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"date"=>"07/27/16"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/3" for ::1 at 2016-07-17 14:37:21 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (118.1ms)[0m  SELECT  `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1
+  Rendered events/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 266ms (Views: 77.8ms | ActiveRecord: 118.1ms)
+
+
+Started GET "/events?date=07%2F27%2F16" for ::1 at 2016-07-17 14:37:45 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"date"=>"07/27/16"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/3" for ::1 at 2016-07-17 14:37:49 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/3/edit" for ::1 at 2016-07-17 14:37:51 -0700
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1[0m
+  Rendered events/_form.html.erb (37.9ms)
+  Rendered events/edit.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?date=07%2F27%2F16" for ::1 at 2016-07-17 14:38:01 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"date"=>"07/27/16"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/3/edit" for ::1 at 2016-07-17 14:38:03 -0700
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1[0m
+  Rendered events/_form.html.erb (9.5ms)
+  Rendered events/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?date=07%2F27%2F16" for ::1 at 2016-07-17 14:44:55 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"date"=>"07/27/16"}
+  [1m[35mEvent Load (1.9ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 361ms (Views: 338.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:44:57 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (54.3ms)
+  Rendered homepage/index.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 156ms (Views: 153.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events?show_all=true" for ::1 at 2016-07-17 14:44:58 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"show_all"=>"true"}
+  [1m[35mEvent Load (0.7ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events?show_all=true" for ::1 at 2016-07-17 14:48:32 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"show_all"=>"true"}
+  [1m[36mEvent Load (1.8ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 220ms (Views: 210.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-17 14:48:32 -0700
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:48:34 -0700
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (36.9ms)
+  Rendered homepage/index.html.erb within layouts/application (78.6ms)
+Completed 200 OK in 113ms (Views: 111.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?show_all=true" for ::1 at 2016-07-17 14:48:35 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"show_all"=>"true"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:48:37 -0700
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (24.1ms)
+  Rendered homepage/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:49:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (30.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (0.7ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (92.6ms)
+  Rendered homepage/index.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 910ms (Views: 843.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/events?show_all=true" for ::1 at 2016-07-17 14:49:17 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"show_all"=>"true"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 116ms (Views: 114.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:49:32 -0700
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (20.4ms)
+  Rendered homepage/index.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 85ms (Views: 83.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:49:38 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (74.4ms)
+  Rendered homepage/index.html.erb within layouts/application (113.6ms)
+Completed 200 OK in 237ms (Views: 235.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-17 14:49:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-17 14:49:40 -0700
+
+
+Started GET "/events?show_all=true" for ::1 at 2016-07-17 14:49:42 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"show_all"=>"true"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:49:44 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (19.4ms)
+  Rendered homepage/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events?show_all=true" for ::1 at 2016-07-17 14:49:45 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"show_all"=>"true"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered events/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homepage/index" for ::1 at 2016-07-17 14:49:46 -0700
+Processing by HomepageController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (26.5ms)
+  Rendered homepage/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.6ms)

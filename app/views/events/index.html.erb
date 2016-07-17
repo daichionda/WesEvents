@@ -2,7 +2,11 @@
 <p><%= link_to 'New Event', new_event_path %></p>
 
 <% if @events != [] %>
-    <p> Events on <%= params[:date] %> </p>
+    <% if !(params[:show_all] == 'true') %>
+        <p> Events on <%= params[:date] %> </p>
+    <% else %>
+        <p> Showing all events </p>
+    <% end %>
     <table >
       <tr>
         <th width = '150'>Event</th>
