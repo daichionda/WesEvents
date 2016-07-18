@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+body {
+  background-color: #41414D;
+  font-family: Roboto;
+  color: white;
+  font-weight: normal;
+}
+button {
+  background-color: #E5645E;
+  color: #41414D;
+  padding: 10px;
+  outline: none;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+a {
+  color: black;
+  text-decoration: none;
+}

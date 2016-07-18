@@ -1,35 +1,49 @@
-<p>
-  <strong>Event Name:</strong>
-  <%= @event.eventName %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
+<div id = "header">
 
-<p>
-  <strong>Event Start:</strong>
-  <%= @event.startTime.strftime('%I:%M:%S %p') %>
-  <%= @event.startDay.strftime('%m/%d/%y') %>
-</p>
+    <h1>WesEvents</h1>
+    <div id = "navbar">
+        <button class = "hollowbutton"> <%= link_to 'All Events', controller: 'events', :show_all => true %> </button>
+        <button class = "createbutton"> <%= link_to 'Create New Event', new_event_path(:redirect_to => 'homepage') %></button>
+    </div>
 
-<p>
-  <strong>Event End:</strong>
-  <%= @event.endTime.strftime('%I:%M:%S %p') %>
-  <%= @event.endDay.strftime('%m/%d/%y') %>
-</p>
+</div>
 
-<p>
-  <strong>Descirption:</strong>
-  <%= @event.description %>
-</p>
-<% if @event.facebookLink == "" %>
+<div id = "showlist">
+
     <p>
-        <strong>Facebook Event Link:</strong>
-        <a href = '<%= @event.facebookLink %>' target = '_blank'>Event Facebook Page<a/>
+      <strong>Event Name:</strong>
+      <%= @event.eventName %>
     </p>
-<% end %>
 
-<%= link_to 'Edit', edit_event_path(@event) %>
-<%= link_to 'Back', events_path(:date => @event.startDay.strftime('%m/%d/%y')) %>
+    <p>
+      <strong>Location:</strong>
+      <%= @event.location %>
+    </p>
+
+    <p>
+      <strong>Event Start:</strong>
+      <%= @event.startTime.strftime('%I:%M:%S %p') %>
+      <%= @event.startDay.strftime('%m/%d/%y') %>
+    </p>
+
+    <p>
+      <strong>Event End:</strong>
+      <%= @event.endTime.strftime('%I:%M:%S %p') %>
+      <%= @event.endDay.strftime('%m/%d/%y') %>
+    </p>
+
+    <p>
+      <strong>Descirption:</strong>
+      <%= @event.description %>
+    </p>
+    <% if @event.facebookLink == "" %>
+        <p>
+            <strong>Facebook Event Link:</strong>
+            <a href = '<%= @event.facebookLink %>' target = '_blank'>Event Facebook Page<a/>
+        </p>
+    <% end %>
+
+    <%= link_to 'Edit', edit_event_path(@event) %>
+    <%= link_to 'Back', events_path(:date => @event.startDay.strftime('%m/%d/%y')) %>
+</div>

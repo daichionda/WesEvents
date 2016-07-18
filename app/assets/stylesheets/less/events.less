@@ -1,0 +1,67 @@
+@darkgrey: #41414D;
+@red: #E5645E;
+@grey: #5a5a64;
+@fsize: 15px;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import "elements.less";
+
+#titlebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dummy {
+    visibility: hidden;
+}
+
+#eventlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    text-align: left;
+    .rounded(10px);
+    margin: 10px;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: @fsize - 2;
+    width: auto;
+    padding: 5px;
+    text-transform: uppercase;
+    color: grey;
+    border-bottom: 0.5px white solid;
+}
+
+td {
+    padding: 10px;
+    border: 0.5px solid white;
+
+}
+
+.listbutton {
+    font-size: @fsize;
+    background-color: @grey;
+    margin: 0px;
+    .rounded(15px);
+}
+
+.dayswitch {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dayswitchbutton {
+    .listbutton;
+    width: 150px;
+}

@@ -1,44 +1,71 @@
-<h1>Listing Events</h1>
-<p><%= link_to 'New Event', new_event_path(:redirect_to => @state) %></p>
 
-<% if @events != [] %>
-    <% # Header whether showing all or just on specific date %>
-    <% if !(params[:show_all] == 'true') %>
-        <p> Events on <%= params[:date] %> </p>
+<div id = "header">
+
+    <h1>WesEvents</h1>
+    <div id = "navbar">
+        <button class = "hollowbutton"> <%= link_to 'All Events', controller: 'events', :show_all => true %> </button>
+        <button class = "createbutton"> <%= link_to 'Create New Event', new_event_path(:redirect_to => @state) %></button>
+    </div>
+
+</div>
+
+<div id = "titlebar">
+
+    <button class = "hollowbutton"><%= link_to "<", controller: 'homepage', :start_date => @date %></button>
+    <h2>EVENTS LISTING</h2>
+    <button class = "dummy">></button>
+
+</div>
+
+
+
+<div id = "eventlist">
+    <% if @events != [] %>
+        <% # Header whether showing all or just on specific date %>
+        <% if !(params[:show_all] == 'true') %>
+            <div class = "dayswitch">
+                <button class = "dayswitchbutton"><%= link_to 'Previous Day', events_path(:date => @prevDay) %> </button>
+                <h3>Events on <%= params[:date] %></h3>
+                <button class = "dayswitchbutton"><%= link_to 'Next day', events_path(:date => @nextDay) %> </button>
+            </div>
+        <% else %>
+            <h3>All Events</h3>
+        <% end %>
+        <table>
+          <tr>
+            <th width = '150'>Event</th>
+            <th width = '150'>Location</th>
+            <th width = '150'>Event Start</th>
+            <th width = '150'>Event End</th>
+            <th width = '150'>Description</th>
+            <th width = '150'>Facebook Event Link</th>
+            <th colspan='3' />
+          </tr>
+          <% @events.each do |event| %>
+            <tr>
+                <td><%= event.eventName %></td>
+                <td><%= event.location %></td>
+                <td><%= event.startTime.strftime('%I:%M %p') %><!--<br><%= event.startDay.strftime('%m/%d/%y') %> --></td>
+                <td><%= event.endTime.strftime('%I:%M %p') %><!--<br><%= event.endDay.strftime('%m/%d/%y') %> --></td>
+                <td><%= event.description %></td>
+                <% if event.facebookLink == "" %>
+                    <td><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
+                <% elsif %>
+                    <td></td>
+                <% end %>
+              <td><button class = "listbutton"><%= link_to 'Show', event_path(event) %></button></td>
+              <td><button class = "listbutton"><%= link_to 'Edit', edit_event_path(event)%></button></td>
+              <td><button class = "listbutton"><%= link_to 'Delete', event_path(event), method: :delete, data: {confirm: 'Are you sure?' } %></button></td>
+            </tr>
+          <% end %>
+        </table>
     <% else %>
-        <p> Showing all events </p>
+        <div class = "dayswitch">
+            <button class = "dayswitchbutton"><%= link_to 'Previous Day', events_path(:date => @prevDay) %> </button>
+            <h3>Events on <%= params[:date] %></h3>
+            <button class = "dayswitchbutton"><%= link_to 'Next day', events_path(:date => @nextDay) %> </button>
+        </div>
+        <p> No Events to Show! </p>
     <% end %>
-    <table >
-      <tr>
-        <th width = '150'>Event</th>
-        <th width = '150'>Location</th>
-        <th width = '150'>Event Start</th>
-        <th width = '150'>Event End</th>
-        <th width = '150'>Description</th>
-        <th width = '150'>Facebook Event Link</th>
-        <th colspan='3' />
-      </tr>
-      <% @events.each do |event| %>
-        <tr>
-            <td><%= event.eventName %></td>
-            <td><%= event.location %></td>
-            <td><%= event.startTime.strftime('%I:%M %p') %><!--<br><%= event.startDay.strftime('%m/%d/%y') %> --></td>
-            <td><%= event.endTime.strftime('%I:%M %p') %><!--<br><%= event.endDay.strftime('%m/%d/%y') %> --></td>
-            <td><%= event.description %></td>
-            <% if event.facebookLink == "" %>
-                <td><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
-            <% elsif %>
-                <td></td>
-            <% end %>
-          <td><%= link_to 'Show', event_path(event) %></td>
-          <td><%= link_to 'Edit', edit_event_path(event)%></td>
-          <td> <%= link_to 'Delete', event_path(event), method: :delete, data: {confirm: 'Are you sure?' } %> </td>
-        </tr>
-      <% end %>
-    </table>
-<% else %>
-    <p> No Events on <%= params[:date] %>! </p>
-<% end %>
-<p><%= link_to 'Next day', events_path(:date => @nextDay) %> </p>
-<p><%= link_to 'Previous Day', events_path(:date => @prevDay) %> </p>
-<p><%= link_to "Go Back", controller: 'homepage', :start_date => @date %></p>
+
+</div>

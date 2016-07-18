@@ -1,0 +1,62 @@
+/*
+LESS Basics
+
+VARIABLES
+@var: #ffffff;
+
+.class {
+    background-color: @var;
+}
+
+@font-family: Georgia
+@dot-border: dotted
+
+..etc.
+
+
+MIXINS
+- Mixins reuse whole declarations in a CSS rule set in another rule set
+
+.gradients {
+    background: declare;
+    background: declare;
+    ...etc.
+}
+
+div {
+    .gradients
+}
+
+- div will inherit all properties of .gradients
+
+@import "elements.less"
+- LESS Elements gives a preset amount of CSS3 Mixins already predefined by less from elements.less
+- (but must download and important elements.less)
+- documentation here: http://lesselements.com/
+
+NESTED RULES
+- can nest child elements inside parent elements
+nav {
+    li {
+        a {
+
+           }
+        }
+    }
+- can use pseudoclasses like :hover and assign it to the selector above
+a {
+    &:hover {
+
+            }
+   }
+
+OPERATIONS
+
+@height: 100px;
+
+.element {
+    height: @height *2;
+}
+
+SCOPE
+- inherit locally then look through a wider scope

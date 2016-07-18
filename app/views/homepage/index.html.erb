@@ -1,41 +1,57 @@
-<h1>Wes Events</h1>
-<% # Renders the month calendar %>
-<%= month_calendar events: @events do |date, events| %>
-    <% @month = date.strftime('%m') %>
-    <% unless params[:start_date].nil? %>
-        <% # Only show days of month selected %>
-        <% if date.strftime('%m') == params[:start_date][5,2] %>
-            <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d/%y')) %>
 
-            <% events.each do |event| %>
-                <% # Display event if one on that day %>
-                <div>
-                    <%= event.eventName %>
-                </div>
+<div id = "header">
+
+    <h1>WesEvents</h1>
+    <div id = "navbar">
+        <button class = "hollowbutton"> <%= link_to 'All Events', controller: 'events', :show_all => true %> </button>
+        <button class = "createbutton"> <%= link_to 'Create New Event', new_event_path(:redirect_to => 'homepage') %></button>
+    </div>
+
+</div>
+
+<div id = "calendar">
+
+    <% # Renders the month calendar %>
+    <%= month_calendar events: @events do |date, events| %>
+        <% @month = date.strftime('%m') %>
+        <% unless params[:start_date].nil? %>
+            <% # Only show days of month selected %>
+            <% if date.strftime('%m') == params[:start_date][5,2] %>
+                <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d/%y')) %>
+
+                <% events.each do |event| %>
+                    <% # Display event if one on that day %>
+                    <div>
+                        <%= event.eventName %>
+                    </div>
+                <% end %>
             <% end %>
+        <% else %>
+            <% # Only show days of month selected %>
+            <% if date.strftime('%m') == Time.now.strftime('%m') %>
+                <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d/%y')) %>
+                <% events.each do |event| %>
+                    <% # Display event if one on that day %>
+                    <div>
+                        <%= event.eventName %>
+                    </div>
+                <% end %>
+            <% end %>
+        <% end %>
+    <% end %>
+    <% # Show return to current month if not on current month %>
+    <% unless params[:start_date].nil? %>
+        <% unless Time.now.strftime('%m') == params[:start_date][5,2] %>
+            <p> <%= link_to 'Return to Current Month', controller: 'homepage' %> </p>
         <% end %>
     <% else %>
-        <% # Only show days of month selected %>
-        <% if date.strftime('%m') == Time.now.strftime('%m') %>
-            <%= link_to '' + date.strftime('%d') + '', events_path(:date => date.strftime('%m/%d/%y')) %>
-            <% events.each do |event| %>
-                <% # Display event if one on that day %>
-                <div>
-                    <%= event.eventName %>
-                </div>
-            <% end %>
+        <% unless @month == Time.now.strftime('%m') %>
+            <p> <%= link_to 'Return to Current Month', controller: 'homepage' %> </p>
         <% end %>
     <% end %>
-<% end %>
-<% # Show return to current month if not on current month %>
-<% unless params[:start_date].nil? %>
-    <% unless Time.now.strftime('%m') == params[:start_date][5,2] %>
-        <p> <%= link_to 'Return to Current Month', controller: 'homepage' %> </p>
-    <% end %>
-<% else %>
-    <% unless @month == Time.now.strftime('%m') %>
-        <p> <%= link_to 'Return to Current Month', controller: 'homepage' %> </p>
-    <% end %>
-<% end %>
-<p> <%= link_to 'All Events', controller: 'events', :show_all => true %> </p>
-<p> <%= link_to 'Create New Event', new_event_path(:redirect_to => 'homepage') %></p>
+
+</div>
+
+<div id = "footer">
+
+</div>
