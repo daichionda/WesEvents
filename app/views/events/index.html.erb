@@ -1,7 +1,8 @@
 <h1>Listing Events</h1>
-<p><%= link_to 'New Event', new_event_path %></p>
+<p><%= link_to 'New Event', new_event_path(:redirect_to => @state) %></p>
 
 <% if @events != [] %>
+    <% # Header whether showing all or just on specific date %>
     <% if !(params[:show_all] == 'true') %>
         <p> Events on <%= params[:date] %> </p>
     <% else %>
@@ -36,6 +37,8 @@
       <% end %>
     </table>
 <% else %>
-    <p> No Events on this Day! </p>
+    <p> No Events on <%= params[:date] %>! </p>
 <% end %>
-<p><%= link_to "Go Back", controller: 'homepage' %></p>
+<p><%= link_to 'Next day', events_path(:date => @nextDay) %> </p>
+<p><%= link_to 'Previous Day', events_path(:date => @prevDay) %> </p>
+<p><%= link_to "Go Back", controller: 'homepage', :start_date => @date %></p>

@@ -1,5 +1,5 @@
 <%= form_for @event do |f| %>
-
+    <% # If any errors, show all of them here %>
 	<% if @event.errors.any? %>
     	<div id="error_explanation">
       	<h2>
@@ -25,14 +25,14 @@
 
   <p>
 	<%= f.label :'Event Start' %>
-	<%= f.time_select :startTime, :default => {:hour => Time.now.strftime("%k"), :minut => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %>
+	<%= f.time_select :startTime, :default => {:hour => (Time.now.strftime("%k").to_i + 1), :minut => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %>
 	&emsp;
 	<%= f.date_select :startDay, :order => [:month, :day, :year] %>
   </p>
 
   <p>
 	<%= f.label :'Event End' %>
-	<%= f.time_select :endTime, :default => {:hour => Time.now.strftime("%k"), :minut => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %>
+	<%= f.time_select :endTime, :default => {:hour => (Time.now.strftime("%k").to_i + 1), :minut => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %>
 	&emsp;
 	<%= f.date_select :endDay, :order => [:month, :day, :year] %>
   </p>
