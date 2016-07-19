@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: WesAdmits2_0_production
-  username: WesAdmits2_0
-  password: <%= ENV['WESADMITS2_0_DATABASE_PASSWORD'] %>
+  database: dam49a124vjngb
+  username: qrgdtuzhyeckcg
+  password: jn9ZCFcFH_vu8wxFU5n_xQ9W-a
