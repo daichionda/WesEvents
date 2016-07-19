@@ -1,5 +1,21 @@
-<h1>Update Event</h1>
+<div id = "header">
+
+    <h1><%= link_to 'WesEvents', controller: 'homepage' %></h1>
+    <div id = "navbar">
+        <button class = "hollowbutton"> <%= link_to 'All Events', controller: 'events', :show_all => true %> </button>
+        <button class = "createbutton"> <%= link_to 'Create New Event', new_event_path(:redirect_to => @state) %></button>
+    </div>
+
+</div>
+
+<div id = "titlebar">
+
+    <button class = "hollowbutton">
+        <%= link_to '<', events_path(:date => @event.startDay.strftime('%m/%d/%y')) %>
+    </button>
+    <h2>UPDATE EVENT</h2>
+    <button class = "dummy">></button>
+
+</div>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', events_path(:date => @event.startDay.strftime('%m/%d/%y')) %>

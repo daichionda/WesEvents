@@ -2,13 +2,17 @@
 @red: #E5645E;
 @grey: #5a5a64;
 @fsize: 15px;
+@lightgrey: #F8F8FA;
 
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Avenir);
 @import "elements.less";
 
 
 h1 {
     font-size: @fsize+40;
+    a {
+        color: white;
+    }
 }
 
 h2 {
@@ -28,12 +32,13 @@ p {
 }
 
 
+
 body {
-    background-color: @darkgrey;
-    font-family: Roboto;
-    color: white;
-    font-weight: normal;
+    font-family: Avenir;
+    color: @darkgrey;
+    font-weight: 100;
     margin: 0;
+    background-color: @lightgrey;
 }
 
 button {
@@ -45,12 +50,18 @@ button {
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    font-family: Avenir;
+    a {
+        color: white;
+    }
 }
 
 a {
-    color: white;
+    color: @darkgrey;
     text-decoration: none;
 }
+
+
 
 //HEADER
 
@@ -61,6 +72,8 @@ a {
     align-items: center;
     padding-left: 50px;
     padding-right: 50px;
+    background-color: @darkgrey;
+    color: white;
 }
 
 .createbutton {
@@ -68,7 +81,7 @@ a {
 }
 
 .hollowbutton {
-    background-color: transparent;
+    background-color: @darkgrey;
     border: solid 1px white;
 }
 

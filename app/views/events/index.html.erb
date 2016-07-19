@@ -1,7 +1,7 @@
 
 <div id = "header">
 
-    <h1>WesEvents</h1>
+    <h1><%= link_to 'WesEvents', controller: 'homepage' %></h1>
     <div id = "navbar">
         <button class = "hollowbutton"> <%= link_to 'All Events', controller: 'events', :show_all => true %> </button>
         <button class = "createbutton"> <%= link_to 'Create New Event', new_event_path(:redirect_to => @state) %></button>
@@ -43,13 +43,13 @@
           </tr>
           <% @events.each do |event| %>
             <tr>
-                <td><%= event.eventName %></td>
+                <td id = "listname"><%= event.eventName %></td>
                 <td><%= event.location %></td>
                 <td><%= event.startTime.strftime('%I:%M %p') %><!--<br><%= event.startDay.strftime('%m/%d/%y') %> --></td>
                 <td><%= event.endTime.strftime('%I:%M %p') %><!--<br><%= event.endDay.strftime('%m/%d/%y') %> --></td>
                 <td><%= event.description %></td>
                 <% if event.facebookLink == "" %>
-                    <td><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
+                    <td id = "listlink"><a href = '<%= event.facebookLink %>' target = '_blank'>Event Facebook Page</a></td>
                 <% elsif %>
                     <td></td>
                 <% end %>

@@ -1,0 +1,100 @@
+@import 'elements.less';
+@import 'homepage.less';
+
+#calendar {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+    margin-top: 2%
+
+}
+
+.simple-calendar {
+   table { }
+
+   th {
+       background-color: @darkgrey;
+       color: white;
+       text-align: center;
+   }
+
+   td {
+       vertical-align: top;
+   }
+
+  .day {
+      width: 100px;
+      height: 100px;
+      border: 0.5px solid lightgrey;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+      background-color: @red;
+  }
+  .past {
+      background-color: @lightgrey;
+      a {
+          color: lightgrey;
+      }
+  }
+  .future {}
+
+  .start-date {
+
+  }
+
+  .prev-month {
+      a {
+          color: lightgrey;
+      }
+
+  }
+  .next-month {
+      a {
+          color: lightgrey;
+      }
+  }
+  .current-month {}
+
+  .has-events {
+  }
+}
+
+.calendar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.calendar-title {
+    font-size: @fsize+30;
+    font-weight: 900;
+}
+
+.calendarmonth {
+    text-align: center;
+}
+
+.calendardate {
+    a {
+        color: @grey;
+        font-size: 12px;
+    }
+    text-align: right;
+}
+
+.calendarevent {
+    a {
+        color: @grey;
+    }
+}

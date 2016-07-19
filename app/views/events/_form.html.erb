@@ -3,8 +3,8 @@
 	<% if @event.errors.any? %>
     	<div id="error_explanation">
       	<h2>
-        	<%= pluralize(@event.errors.count, "error") %> prohibited
-        	this event from being published:
+        	<%= pluralize(@event.errors.count, "error") %>
+            Whoops! Something wrong with your event.
       	</h2>
       	<ul>
         	<% @event.errors.full_messages.each do |msg| %>
@@ -13,41 +13,48 @@
       	</ul>
     	</div>
   	<% end %>
-  <p>
-    <%= f.label :'Event Name' %><br>
-    <%= f.text_field :eventName, :required => true %>
-  </p>
 
-  <p>
-    <%= f.label :Location %><br>
-    <%= f.text_field :location, :required => true %>
-  </p>
+<div class = "formall">
+  <div class = "formgroup">
+    <span class = "formlabel"><%= f.label :'Event Name' %></span><br>
+    <span class = "forminput"><%= f.text_field :eventName, :required => true, :class => "forminput" %></span>
+  </div>
 
-  <p>
-	<%= f.label :'Event Start' %>
-	<%= f.time_select :startTime, :default => {:hour => (Time.now.strftime("%k").to_i + 1), :minut => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %>
+  <div class = "formgroup">
+    <span class = "formlabel"><%= f.label :Location %></span><br>
+    <span class = "forminput"><%= f.text_field :location, :required => true, :class => "forminput" %></span>
+  </div>
+
+  <div class = "formgroup">
+	<span class = "formlabel"><%= f.label :'Event Start' %></span><br>
+	<span class = "forminput"><%= f.time_select :startTime, :default => {:hour => (Time.now.strftime("%k").to_i + 1), :minute => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %></span>
 	&emsp;
-	<%= f.date_select :startDay, :order => [:month, :day, :year] %>
-  </p>
+	<span class = "forminput"><%= f.date_select :startDay, :order => [:month, :day, :year], :class => "forminput" %></span>
+  </div>
 
-  <p>
-	<%= f.label :'Event End' %>
-	<%= f.time_select :endTime, :default => {:hour => (Time.now.strftime("%k").to_i + 1), :minut => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %>
+  <div class = "formgroup">
+	<span class = "formlabel"><%= f.label :'Event End' %></span><br>
+	<span class = "forminput"><%= f.time_select :endTime, :default => {:hour => (Time.now.strftime("%k").to_i + 1), :minute => Time.now.strftime("%M")}, :ampm => true, :minute_step => 15 %></span>
 	&emsp;
-	<%= f.date_select :endDay, :order => [:month, :day, :year] %>
-  </p>
+	<span class = "forminput"><%= f.date_select :endDay, :order => [:month, :day, :year], :class => "forminput" %></span>
+  </div>
 
-  <p>
-    <%= f.label :Description %><br>
-    <%= f.text_area :description, :required => true %>
-  </p>
+  <div class = "formgroup">
+    <span class = "formlabel"><%= f.label :Description %></span><br>
+    <span class = "forminput"><%= f.text_area :description, :required => true, :class => "forminput"  %></span>
+  </div>
 
-  <p>
-    <%= f.label :'Facebook Link' %><br>
-    <%= f.text_field :facebookLink %>
-  </p>
+  <div class = "formgroup">
+    <span class = "formlabel"><%= f.label :'Facebook Link' %></span><br>
+    <span class = "forminput"><%= f.text_field( :facebookLink, :class => "forminput" ) %></span>
+  </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class = "formgroup">
+    <%= f.submit :class => "submitbutton" %>
+  </div>
+
+ </div>
+
+
+
 <% end %>
