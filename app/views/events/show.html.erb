@@ -49,8 +49,8 @@
             <a href = '<%= @event.facebookLink %>' target = '_blank'>Event Facebook Page<a/>
         </h4>
     <% end %>
-    
-    <button id = "showedit" class = "createbutton"><%= link_to 'Go to calendar', :controller=>"homepage" %></button>
+
+    <button id = "showedit" class = "createbutton"><%= link_to 'Go to calendar', :controller=>"homepage", :start_date => @event.startDay %></button>
     <button id = "showedit" class = "hollowbutton"><%= link_to 'Edit', edit_event_path(@event) %></button>
 
 
