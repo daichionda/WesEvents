@@ -27,3 +27,30 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'events'
 [0m
   [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `events`
+
+
+Started GET "/" for ::1 at 2016-07-19 01:40:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (62.1ms)
+  Rendered homepage/index.html.erb within layouts/application (86.8ms)
+Completed 200 OK in 1830ms (Views: 1751.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/homepage/index?start_date=2016-08-01" for ::1 at 2016-07-19 01:40:41 -0700
+Processing by HomepageController#index as HTML
+  Parameters: {"start_date"=>"2016-08-01"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (21.0ms)
+  Rendered homepage/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/homepage/index?start_date=2016-07-31" for ::1 at 2016-07-19 01:40:42 -0700
+Processing by HomepageController#index as HTML
+  Parameters: {"start_date"=>"2016-07-31"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (26.6ms)
+  Rendered homepage/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.5ms)
