@@ -45,8 +45,8 @@
     </h4>
     <% if @event.facebookLink != "" %>
         <h4>
-            <span class = "showlabel">Facebook Link:</span>
-            <a href = '<%= @event.facebookLink %>' target = '_blank'>Event Facebook Page<a/>
+            <span class = "showlabel"> Event Link:</span>
+            <a href = '<%= @event.facebookLink %>' target = '_blank'><%= @event.facebookLink %><a/>
         </h4>
     <% end %>
 
