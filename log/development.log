@@ -54,3 +54,139 @@ Processing by HomepageController#index as HTML
   Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (26.6ms)
   Rendered homepage/index.html.erb within layouts/application (32.7ms)
 Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-19 10:38:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  [1m[35mEvent Load (0.7ms)[0m  SELECT `events`.* FROM `events`
+  Rendered /Users/onda/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/simple_calendar-2.1.5/app/views/simple_calendar/_month_calendar.html.erb (86.3ms)
+  Rendered homepage/index.html.erb within layouts/application (122.1ms)
+Completed 200 OK in 1337ms (Views: 1289.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/css/new.self-a0639a5e97caa769acd477710195c8d8818778b9a22219b25c88c216a5cfcd0e.css?body=1" for ::1 at 2016-07-19 10:38:51 -0700
+
+
+Started GET "/assets/css/events.self-178925cc380dfa85b64089e80e7b102caa5cc427fd221220f3288b308ae2b895.css?body=1" for ::1 at 2016-07-19 10:38:51 -0700
+
+
+Started GET "/assets/css/homepage.self-1ccb6c5d704d638dfa66ed07b771e572f954125544c5e88a9640f5507345ce21.css?body=1" for ::1 at 2016-07-19 10:38:51 -0700
+
+
+Started GET "/assets/css/edit.self-1ccb6c5d704d638dfa66ed07b771e572f954125544c5e88a9640f5507345ce21.css?body=1" for ::1 at 2016-07-19 10:38:51 -0700
+
+
+Started GET "/assets/css/show.self-8cb9858f676d6dc5bf4dee0957976ccc7f17a75a08d2eabe4f035e957fe63ab3.css?body=1" for ::1 at 2016-07-19 10:38:51 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-19 10:38:51 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-19 10:38:51 -0700
+
+
+Started GET "/assets/css/elements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-19 10:38:52 -0700
+
+
+Started GET "/assets/css/calendar.self-7c6dc5a5baee190e5c13b3fc982594d55505e536909615191be4f39590705067.css?body=1" for ::1 at 2016-07-19 10:38:52 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-19 10:38:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-19 10:38:52 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-19 10:38:52 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-19 10:38:52 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-19 10:38:52 -0700
+
+
+Started GET "/events/new?redirect_to=homepage" for ::1 at 2016-07-19 10:38:54 -0700
+Processing by EventsController#new as HTML
+  Parameters: {"redirect_to"=>"homepage"}
+  Rendered events/_form.html.erb (639.6ms)
+  Rendered events/new.html.erb within layouts/application (643.9ms)
+Completed 200 OK in 838ms (Views: 804.0ms | ActiveRecord: 20.7ms)
+
+
+Started POST "/events" for ::1 at 2016-07-19 10:39:02 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xwnwjP2ZX98O5+6494qnSpgOuM8eVihQ+rZLOH6GZri9MQ94/G6mGCAsAFwyKVElKm268B5qTSV/3M9Umg/PIg==", "event"=>{"eventName"=>"a", "location"=>"w", "startTime(1i)"=>"2016", "startTime(2i)"=>"7", "startTime(3i)"=>"19", "startTime(4i)"=>"11", "startTime(5i)"=>"00", "startDay(2i)"=>"7", "startDay(3i)"=>"16", "startDay(1i)"=>"2016", "endTime(1i)"=>"2016", "endTime(2i)"=>"7", "endTime(3i)"=>"19", "endTime(4i)"=>"11", "endTime(5i)"=>"00", "endDay(2i)"=>"7", "endDay(3i)"=>"19", "endDay(1i)"=>"2016", "description"=>"asd", "facebookLink"=>"asd"}, "commit"=>"Create Event"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered events/_form.html.erb (41.2ms)
+  Rendered events/new.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 109ms (Views: 102.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for ::1 at 2016-07-19 10:39:29 -0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  Rendered events/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 188ms (Views: 186.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/css/calendar.self-7c6dc5a5baee190e5c13b3fc982594d55505e536909615191be4f39590705067.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/css/homepage.self-1ccb6c5d704d638dfa66ed07b771e572f954125544c5e88a9640f5507345ce21.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/css/edit.self-1ccb6c5d704d638dfa66ed07b771e572f954125544c5e88a9640f5507345ce21.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/css/events.self-178925cc380dfa85b64089e80e7b102caa5cc427fd221220f3288b308ae2b895.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/css/elements.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/css/new.self-e60a71ce2a08d68610c5cc4d7988f15b29b76a5423bf546e4fa88c1ae005f6b2.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/css/show.self-8cb9858f676d6dc5bf4dee0957976ccc7f17a75a08d2eabe4f035e957fe63ab3.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-19 10:39:30 -0700
+
+
+Started GET "/events/new?redirect_to=" for ::1 at 2016-07-19 10:39:32 -0700
+Processing by EventsController#new as HTML
+  Parameters: {"redirect_to"=>""}
+  Rendered events/_form.html.erb (9.9ms)
+  Rendered events/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2016-07-19 10:39:36 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/YNzPu2PwHYxvDgu0oIzdO8rodWPrhWyvz0w16xWNw6Hu4zK7Hg5sR931soXIcUbXUij6o+ScMc6V7S7SN+elA==", "event"=>{"eventName"=>"s", "location"=>"s", "startTime(1i)"=>"2016", "startTime(2i)"=>"7", "startTime(3i)"=>"19", "startTime(4i)"=>"11", "startTime(5i)"=>"00", "startDay(2i)"=>"7", "startDay(3i)"=>"17", "startDay(1i)"=>"2016", "endTime(1i)"=>"2016", "endTime(2i)"=>"7", "endTime(3i)"=>"19", "endTime(4i)"=>"11", "endTime(5i)"=>"00", "endDay(2i)"=>"7", "endDay(3i)"=>"19", "endDay(1i)"=>"2016", "description"=>"s", "facebookLink"=>""}, "commit"=>"Create Event"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered events/_form.html.erb (13.3ms)
+  Rendered events/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 66ms (Views: 61.1ms | ActiveRecord: 0.5ms)
